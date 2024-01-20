@@ -1,0 +1,24 @@
+server:
+  port: 8070
+
+spring:
+  application:
+    name: courses
+  datasource:
+    url: jdbc:mysql://localhost:3307/entity?allowPublicKeyRetrieval=true
+    username: root
+    password: passwd
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jpa:
+      hibernate:
+        ddl-auto: update
+        format_sql: true
+      show-sql: true
+      generate-ddl: true
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.MySQLDialect
+application:
+  config:
+    students-url: http://localhost:8070/api/v1/controller2
+
